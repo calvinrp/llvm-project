@@ -42,6 +42,7 @@
 
 using namespace llvm;
 
+#if !defined(__wasi__)
 #ifdef _WIN32
 WSABalancer::WSABalancer() {
   WSADATA WsaData;
@@ -339,3 +340,5 @@ ssize_t raw_socket_stream::read(char *Ptr, size_t Size,
   }
   return raw_fd_stream::read(Ptr, Size);
 }
+
+#endif
