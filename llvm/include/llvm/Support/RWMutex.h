@@ -10,8 +10,6 @@
 //
 //===----------------------------------------------------------------------===//
 
-#if LLVM_ENABLE_THREADS
-
 #ifndef LLVM_SUPPORT_RWMUTEX_H
 #define LLVM_SUPPORT_RWMUTEX_H
 
@@ -204,5 +202,3 @@ typedef SmartScopedWriter<false> ScopedWriter;
 } // end namespace llvm
 
 #endif // LLVM_SUPPORT_RWMUTEX_H
-
-#endif
