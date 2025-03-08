@@ -57,7 +57,11 @@
 #include "llvm/Support/Memory.h"
 #include "llvm/Support/MemoryBuffer.h"
 #include "llvm/Support/Path.h"
+
+#if !defined(__wasi__)
 #include "llvm/Support/PluginLoader.h"
+#endif
+
 #include "llvm/Support/Process.h"
 #include "llvm/Support/Program.h"
 #include "llvm/Support/SourceMgr.h"

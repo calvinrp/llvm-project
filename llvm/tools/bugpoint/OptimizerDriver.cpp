@@ -27,7 +27,9 @@
 #include "llvm/Support/ToolOutputFile.h"
 
 #define DONT_GET_PLUGIN_LOADER_OPTION
+#if !defined(__wasi__)
 #include "llvm/Support/PluginLoader.h"
+#endif
 
 
 using namespace llvm;
