@@ -10,6 +10,8 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if LLVM_ENABLE_THREADS
+
 #ifndef LLVM_SUPPORT_MUTEX_H
 #define LLVM_SUPPORT_MUTEX_H
 
@@ -73,3 +75,6 @@ namespace llvm
 }
 
 #endif
+
+#endif
+
